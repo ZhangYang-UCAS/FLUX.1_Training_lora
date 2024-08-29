@@ -1,4 +1,5 @@
 # Replace <YOUR DIRECTORY NAME> with the directory of your image folder，others  does not need to be changed
+# The model is from https://huggingface.co/microsoft/Florence-2-large
 
 !pip install -U oyaml transformers einops albumentations python-dotenv
 
