@@ -45,14 +45,3 @@ for i in os.listdir('<YOUR DIRECTORY NAME>'+'/'):
         f.write(parsed_answer["<MORE_DETAILED_CAPTION>"])
         f.close()
 
-# The data must be stored in its own directory in the following format:
-"""
----|
-  Your Image Directory
-   |
-------- img1.png
-------- img1.txt
-------- img2.png
-------- img2.txt
-...
-"""
