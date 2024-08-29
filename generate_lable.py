@@ -1,3 +1,5 @@
+# Replace <YOUR DIRECTORY NAME> with the directory of your image folder，others  does not need to be changed
+
 !pip install -U oyaml transformers einops albumentations python-dotenv
 
 import requests
@@ -15,10 +17,9 @@ model_id = 'microsoft/Florence-2-large'
 model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, torch_dtype='auto').eval().cuda()
 processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
 
-# prompt = "Describe this image and its style in a very detailed manner"
-prompt = "<MORE_DETAILED_CAPTION>"
+# <MORE_DETAILED_CAPTION> No need to change. this means generating a more detailed description, and this does not need to be changed
 
-# Replace <YOUR DIRECTORY NAME> with the directory of your image folder
+prompt = "<MORE_DETAILED_CAPTION>"
 
 for i in os.listdir('<YOUR DIRECTORY NAME>'+'/'):
     if i.split('.')[-1]=='txt':
@@ -36,7 +37,6 @@ for i in os.listdir('<YOUR DIRECTORY NAME>'+'/'):
     )
     generated_text = processor.batch_decode(generated_ids, skip_special_tokens=False)[0]
 
-# <MORE_DETAILED_CAPTION> means generating a more detailed description, and this does not need to be changed
 
     parsed_answer = processor.post_process_generation(generated_text, task="<MORE_DETAILED_CAPTION>", image_size=(image.width, image.height))
     print(parsed_answer)
