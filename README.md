@@ -20,3 +20,7 @@ pip3 install -r requirements.txt
 pip install peft
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
+使用以下终端命令登录，向 HuggingFace Cache 添加只读令牌：  
+```
+huggingface-cli login
+```
