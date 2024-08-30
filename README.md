@@ -45,5 +45,28 @@ run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，�
 ```
  python3 run.py config/examples/train_lora_flux_24gb.yaml
 ```
+## 使用 FLUX.1 LoRA 进行推理
+```
+import torch
+from diffusers import FluxPipeline
 
+model_id = 'black-forest-labs/FLUX.1-dev'
+ckpt_name = f'{lora_name}.safetensors'
+
+pipeline = FluxPipeline.from_pretrained(model_id)
+pipeline.load_lora_weights(ckpt_name)
+pipeline.to('cuda', dtype=torch.float16)
+
+prompt = "a photo of a cat"
+
+image = pipeline(
+    prompt=prompt,
+    num_inference_steps=50,
+    generator=torch.Generator("cpu").manual_seed(42),
+    width=1152,
+    height=768,
+    guidance_scale=3.5
+).images[0]
+image.save("output.png")
+```
 
