@@ -1,5 +1,5 @@
-# Replace <YOUR DIRECTORY NAME> with the directory of your image folder，others  does not need to be changed
-# The model is from https://huggingface.co/microsoft/Florence-2-large
+# 将 <YOUR DIRECTORY NAME> 替换为您的图像文件夹的目录，其他内容无需更改
+# 模型来自于 https://huggingface.co/microsoft/Florence-2-large
 
 !pip install -U oyaml transformers einops albumentations python-dotenv
 
@@ -18,7 +18,7 @@ model_id = 'microsoft/Florence-2-large'
 model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, torch_dtype='auto').eval().cuda()
 processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
 
-# <MORE_DETAILED_CAPTION> No need to change. this means generating a more detailed description, and this does not need to be changed
+# <MORE_DETAILED_CAPTION> 不需要改变，这个意思是生成更详细的描述
 
 prompt = "<MORE_DETAILED_CAPTION>"
 
