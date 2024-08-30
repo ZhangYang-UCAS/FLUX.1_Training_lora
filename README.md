@@ -37,6 +37,11 @@ run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，�
 
 最后，我们可以将模型从HuggingFace中下载下来，粘贴到第 62 行（“../black-forest-labs/FLUX.1-schnell”）。现在一切都已设置完毕，我们可以运行训练了！
 
+## 运行 FLUX.1 训练循环
 
+要运行训练循环，我们现在需要做的就是使用脚本run.py。
+```
+ python3 run.py config/examples/train_lora_flux_24gb.yaml
+```
 
 
