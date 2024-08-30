@@ -26,7 +26,7 @@ AI Toolkit 提供了一个训练脚本，run.py可以处理训练 FLUX.1 模型�
 
 可以对 schnell 或 dev 模型进行微调，但我们建议训练 dev 模型。dev 的使用许可更有限，但与 schnell 相比，它在快速理解、拼写和对象组成方面也更加强大。然而，由于 schnell 的提炼，它的训练速度应该要快得多。
 
-run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，我们将编辑该ai-toolkit/config/examples/train_lora_flux_24gb.yaml文件。
+run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，我们将编辑该 ai-toolkit/config/examples/train_lora_flux_24gb.yaml 文件。
 
 我们要编辑的最重要的几行是第 5 行 - 更改名称，第 30 行 - 添加图像目录的路径，以及第 69 行和第 70 行 - 我们可以编辑高度和宽度以反映我们的训练图像。编辑这些行以相应地调整训练程序以在您的图像上运行。
 
