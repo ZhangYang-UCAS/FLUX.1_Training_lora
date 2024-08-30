@@ -19,11 +19,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 pip install peft
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-```
-使用以下终端命令登录，向 HuggingFace Cache 添加只读令牌：  
-```
-huggingface-cli login
-```
+
 ## 配置训练循环
 AI Toolkit 提供了一个训练脚本，run.py可以处理训练 FLUX.1 模型的所有复杂问题。
 
@@ -39,6 +35,8 @@ run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，�
 
 在第 38 行，我们可以更改训练步骤数。他们建议在 500 到 4000 之间，所以我们选择中间值 2500。使用这个值我们得到了不错的结果。它会每 250 步检查一次，但如果需要，我们也可以在第 22 行更改这个值。
 
-最后，我们可以将模型从 dev 更改为 schnell，方法是将 schnell 的 HuggingFace id 粘贴到第 62 行（“black-forest-labs/FLUX.1-schnell”）。现在一切都已设置完毕，我们可以运行训练了！
+最后，我们可以将模型从HuggingFace中下载下来，粘贴到第 62 行（“../black-forest-labs/FLUX.1-schnell”）。现在一切都已设置完毕，我们可以运行训练了！
+
+
 
 
