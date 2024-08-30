@@ -19,6 +19,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 pip install peft
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
 
 ## 配置训练循环
 AI Toolkit 提供了一个训练脚本，run.py可以处理训练 FLUX.1 模型的所有复杂问题。
@@ -42,6 +43,6 @@ run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，�
 要运行训练循环，我们现在需要做的就是使用脚本run.py。
 ```
  python3 run.py config/examples/train_lora_flux_24gb.yaml
-
+```
 
 
