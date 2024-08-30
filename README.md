@@ -24,3 +24,9 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 ```
 huggingface-cli login
 ```
+## 配置训练循环
+AI Toolkit 提供了一个训练脚本，run.py可以处理训练 FLUX.1 模型的所有复杂问题。
+
+可以对 schnell 或 dev 模型进行微调，但我们建议训练 dev 模型。dev 的使用许可更有限，但与 schnell 相比，它在快速理解、拼写和对象组成方面也更加强大。然而，由于 schnell 的提炼，它的训练速度应该要快得多。
+
+run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，我们将编辑该train_lora_flux_24gb.yaml文件。
