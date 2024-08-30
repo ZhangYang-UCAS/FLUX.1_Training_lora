@@ -1,4 +1,5 @@
-使用flux训练自己的lora
+# 使用FLUX.1训练自己的lora
+
 ## 数据准备
 数据必须按照以下格式存储在自己的目录中：  
 Your Image Directory  
