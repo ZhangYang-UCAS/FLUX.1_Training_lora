@@ -60,12 +60,12 @@ pipeline.to('cuda', dtype=torch.float16)
 prompt = "a photo of a cat"
 
 image = pipeline(
-    prompt=prompt,
-    num_inference_steps=50,
-    generator=torch.Generator("cpu").manual_seed(42),
+    prompt,
     width=1024,
     height=1024,
-    guidance_scale=3.5
+    guidance_scale=3.5,
+    num_inference_steps=50,
+    generator=torch.Generator("cpu").manual_seed(42),
 ).images[0]
 image.save("output.png")
 ```
