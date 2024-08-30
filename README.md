@@ -50,7 +50,7 @@ run.py采用 yaml 配置文件来处理各种训练参数。对于此用例，�
 import torch
 from diffusers import FluxPipeline
 
-model_id = 'black-forest-labs/FLUX.1-dev'
+model_id = '../black-forest-labs/FLUX.1-dev'
 ckpt_name = f'{lora_name}.safetensors'
 
 pipeline = FluxPipeline.from_pretrained(model_id)
@@ -63,8 +63,8 @@ image = pipeline(
     prompt=prompt,
     num_inference_steps=50,
     generator=torch.Generator("cpu").manual_seed(42),
-    width=1152,
-    height=768,
+    width=1024,
+    height=1024,
     guidance_scale=3.5
 ).images[0]
 image.save("output.png")
