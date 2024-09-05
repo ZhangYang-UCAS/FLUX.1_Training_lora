@@ -71,16 +71,9 @@ config:
         prompts:
           # you can add [trigger] to the prompts here and it will be replaced with the trigger word
 #          - "[trigger] holding a sign that says 'I LOVE PROMPTS!'"\
-          - "woman with red hair, playing chess at the park, bomb going off in the background"
-          - "a woman holding a coffee cup, in a beanie, sitting at a cafe"
-          - "a horse is a DJ at a night club, fish eye lens, smoke machine, lazer lights, holding a martini"
-          - "a man showing off his cool new t shirt at the beach, a shark is jumping out of the water in the background"
-          - "a bear building a log cabin in the snow covered mountains"
-          - "woman playing the guitar, on stage, singing a song, laser lights, punk rocker"
-          - "hipster man with a beard, building a chair, in a wood shop"
+          - "anime style, a man holding a sign that says, 'this is a sign'"
+          - "anime style, hipster man with a beard, building a chair, in a wood shop"
           - "photo of a man, white background, medium shot, modeling clothing, studio lighting, white backdrop"
-          - "a man holding a sign that says, 'this is a sign'"
-          - "a bulldog, in a post apocalyptic world, with a shotgun, in a leather jacket, in a desert, with a motorcycle"
         neg: ""  # not used on flux
         seed: 42
         walk_seed: true
