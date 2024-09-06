@@ -46,7 +46,7 @@ run.py 通过 YAML 配置文件来处理训练参数。在这个例子中，我�
 
 最后，我们可以将模型从HuggingFace中下载下来，并将路径粘贴到第 62 行（例如： “../black-forest-labs/FLUX.1-schnell”）。现在一切都已设置完毕，我们可以运行训练了！   
 
-训练完成的lora将在```/ai-toolkit/output/```文件夹内展示。
+训练完成的lora将在```../ai-toolkit/output/```文件夹内展示。
 
 ## 运行 FLUX.1 训练循环
 
