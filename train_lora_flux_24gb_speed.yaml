@@ -35,7 +35,7 @@ config:
         # images will automatically be resized and bucketed into the resolution specified
         # on windows, escape back slashes with another backslash so
         # "C:\\path\\to\\images\\folder"
-        - folder_path: "/data9/zy/input/data3"
+        - folder_path: "./input/data3"
           caption_ext: "txt"
           caption_dropout_rate: 0.05  # will drop out the caption 5% of time
           shuffle_tokens: false  # shuffle caption order, split by commas
@@ -67,7 +67,7 @@ config:
         dtype: bf16
       model:
         # huggingface model name or path
-        name_or_path: "/data9/zy/models/AWPortrait"
+        name_or_path: "./models/AWPortrait"
         is_flux: true
         quantize: false  # run 8bit mixed precision
         low_vram: false  # uncomment this if the GPU is connected to your monitors. It will use less vram to quantize, but is slower.
