@@ -1,6 +1,7 @@
 # 使用FLUX.1训练自己的lora
 
 ## 数据准备
+训练的数据集必须在resolution参数范围之内，限制长宽小于1024按比例缩放
 数据必须按照以下格式存储在自己的目录中：  
 Your Image Directory  
 ├── img1.png  
