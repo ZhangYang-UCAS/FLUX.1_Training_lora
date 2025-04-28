@@ -80,4 +80,11 @@ image = pipeline(
 ).images[0]
 image.save("output.png")
 ```
-
+## 快速训练 Flux-lora
+只需要第 9 层和第 25 层就可以
+```
+   only_if_contains:
+     - "transformer.single_transformer_blocks.9."
+     - "transformer.single_transformer_blocks.25."
+```
+来源： https://www.reddit.com/r/StableDiffusion/comments/1hfspqk/how_did_i_speed_up_and_made_my_flux_lora_training/
