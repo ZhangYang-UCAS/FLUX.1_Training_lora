@@ -55,7 +55,7 @@ run.py 通过 YAML 配置文件来处理训练参数。在这个例子中，我�
 
 要运行训练循环，我们现在需要做的就是使用脚本run.py。
 ```
- python3 run.py config/examples/train_lora_flux_24gb.yaml
+python3 run.py config/examples/train_lora_flux_24gb.yaml
 ```
 ## 使用 FLUX.1 LoRA 进行推理
 ```
