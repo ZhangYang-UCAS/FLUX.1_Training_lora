@@ -1,3 +1,5 @@
+
+
 # 使用FLUX.1训练自己的lora
 
 ## 数据准备
@@ -63,7 +65,7 @@ import torch
 from diffusers import FluxPipeline
 
 model_id = '../black-forest-labs/FLUX.1-dev'
-ckpt_name = f'{lora_name}.safetensors'
+ckpt_name = 'your_lora.safetensors'  # 请替换为实际的LoRA文件名
 
 pipeline = FluxPipeline.from_pretrained(model_id)
 pipeline.load_lora_weights(ckpt_name)
